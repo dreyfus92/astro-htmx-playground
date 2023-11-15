@@ -5,7 +5,7 @@ import { counter } from '@utils/counter'
 <div class='flex gap-4'>
   <button
     class='flex transform items-center justify-center rounded bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 text-sm font-bold uppercase text-white shadow-md transition duration-200 ease-in hover:scale-105 hover:shadow-lg'
-    hx-post='/partials/increment'
+    hx-post='/partials/increment/'
     hx-trigger='click'
     hx-target='#counter'
     '>+</button
@@ -13,7 +13,7 @@ import { counter } from '@utils/counter'
   <span class='text-white' id='counter'>{counter}</span>
   <button
     class='flex transform items-center justify-center rounded bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 text-sm font-bold uppercase text-white shadow-md transition duration-200 ease-in hover:scale-105 hover:shadow-lg'
-    hx-post='/partials/decrement'
+    hx-post='/partials/decrement/'
     hx-trigger='click'
     hx-target='#counter'>-</button
   >
