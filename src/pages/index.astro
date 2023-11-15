@@ -1,0 +1,21 @@
+---
+import Counter from '@components/Counter.astro'
+import Layout from '@layouts/Layout.astro'
+---
+
+<Layout title='Welcome to Astro.' partial={true}>
+  <main
+    class='prose prose-zinc mx-auto flex flex-col items-center justify-center gap-y-10 pt-10 lg:prose-xl'
+  >
+    <h1 class='text-white'>Astro Partials and HTMX</h1>
+    <button
+      hx-post='/partials/clicked/'
+      hx-trigger='click'
+      hx-swap='innerHTML'
+      class='flex transform items-center justify-center rounded bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 text-sm font-bold uppercase text-white shadow-md transition duration-200 ease-in hover:scale-105 hover:shadow-lg'
+    >
+      Click Me!
+    </button>
+    <Counter />
+  </main>
+</Layout>

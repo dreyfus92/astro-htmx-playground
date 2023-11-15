@@ -1,0 +1,27 @@
+---
+type Props = {
+  title: string
+  partial: boolean
+}
+
+const { title, partial } = Astro.props
+import "@styles/index.css"
+---
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='description' content='Astro description' />
+  <meta name='viewport' content='width=device-width' />
+  <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+  <meta name='generator' content={Astro.generator} />
+  <title>{title}</title>
+  {
+    partial && (
+      <script
+        src='https://unpkg.com/htmx.org@1.9.8'
+        integrity='sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr'
+        crossorigin='anonymous'
+      />
+    )
+  }
+</head>

@@ -1,0 +1,18 @@
+---
+import Head from '@components/Head.astro'
+
+interface Props {
+  title: string
+  partial?: boolean
+}
+
+const { title, partial = false } = Astro.props
+---
+
+<!doctype html>
+<html lang='en'>
+  <Head title={title} partial={partial} />
+  <body class='bg-neutral-800'>
+    <slot />
+  </body>
+</html>
