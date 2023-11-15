@@ -13,5 +13,4 @@ demanding conditions.
 
 - Astro
 - HTMX
-- Bun
 - Tailwind CSS
